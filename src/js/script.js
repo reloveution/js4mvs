@@ -1,4 +1,4 @@
-console.clear
+console.clear()
 // // 1 Переменные, camelCase
 // const firstName = `Mike`
 // let lastName = `Chukalenko`
@@ -51,3 +51,4 @@ const age = 35
 console.log(typeof(isProgrammer))
 console.log(typeof(name))
 console.log(typeof(age))
+console.log(typeof(null))
