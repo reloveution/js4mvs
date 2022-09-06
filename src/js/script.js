@@ -19,3 +19,25 @@
 // // console.log(`Name: ` + firstName + `, Lastname: ${lastName}, Age: ${age}`)
 // alert(firstName + ' ' + lastName)
 
+// 3 Operators
+let currentYear = 2022
+const birthYear = 1987
+let age = currentYear - birthYear
+console.log(age)
+
+const a = 10
+const b = 2
+let c = 32
+
+// c = c + a
+c += a
+c -= a
+c *= a
+c /= a
+
+console.log(a+b)
+console.log(a-b)
+console.log(a*b)
+console.log(a/b)
+console.log(++currentYear)
+console.log(c)
