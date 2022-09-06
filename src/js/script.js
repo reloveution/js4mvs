@@ -43,12 +43,20 @@ console.clear()
 // console.log(++currentYear)
 // console.log(c)
 
-// 4 Data types
-const isProgrammer = true
-const name = `Mike`
-const age = 35
+// // 4 Data types
+// const isProgrammer = true
+// const name = `Mike`
+// const age = 35
 
-console.log(typeof(isProgrammer))
-console.log(typeof(name))
-console.log(typeof(age))
-console.log(typeof(null))
+// console.log(typeof(isProgrammer))
+// console.log(typeof(name))
+// console.log(typeof(age))
+// console.log(typeof(null))
+
+// 5 Operator precedence
+const fullAge = 35
+const birthYear = 1987
+const currentYear = 2022
+
+const isFullAge = (currentYear - birthYear) >= fullAge // 26 >= 27
+console.log(fullAge)
