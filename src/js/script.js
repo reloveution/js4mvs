@@ -106,3 +106,17 @@ console.clear()
 
 // logInfoAbout(`Mike`, `2025`)
 // logInfoAbout(`Mikki`, `1997`)
+
+// 9 Massive
+const cars1 = [`Mazda`, `Mersedes`, `Ford`]
+console.log(cars1)
+// const cars2 = new Array(`Mazda`, `Mersedes`, `Ford`)
+// console.log(cars2)
+
+console.log(cars1[2])
+console.log(cars1.length)
+
+cars1[0] = `Porshe`
+cars1[cars1.length] = `Mazda`
+
+console.log(cars1)
