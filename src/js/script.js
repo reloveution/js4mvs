@@ -53,10 +53,31 @@ console.clear()
 // console.log(typeof(age))
 // console.log(typeof(null))
 
-// 5 Operator precedence
-const fullAge = 35
-const birthYear = 1987
-const currentYear = 2022
+// // 5 Operator precedence
+// const fullAge = 35
+// const birthYear = 1987
+// const currentYear = 2022
 
-const isFullAge = (currentYear - birthYear) >= fullAge // 26 >= 27
-console.log(fullAge)
+// const isFullAge = (currentYear - birthYear) >= fullAge // 26 >= 27
+// console.log(isFullAge)
+
+// 6 Условные операторы
+const courseStatus = `pendng` // ready, fail, pending
+
+if (courseStatus === `ready`) {
+    console.log(`Well done!`)
+} else if (courseStatus === `pending`) {
+    console.log(`Is pending`)
+} else {
+    console.log('Unknown')
+}
+
+const isReady = true
+
+if (isReady) {
+    console.log(`Ok`)
+} else {
+    console.log(`No`)
+}
+
+isReady ? console.log('Ok') : console.log('No')
