@@ -83,11 +83,26 @@ console.clear()
 // // Тернарное выражение
 // isReady ? console.log('Ok') : console.log('No')
 
-// 7 Булевая логика
-// 8 Функции
-function calculateAge(year) {
-    return 2020 - year
-}
+// // 7 Булевая логика
+// // 8 Функции
+// function calculateAge(year) {
+//     return 2022 - year
+// }
 
-const myAge = calculateAge(1993)
-console.log(myAge)
+// const myAge = calculateAge(1993)
+// console.log(myAge)
+// console.log(calculateAge(1996))
+// console.log(calculateAge(1987))
+
+// function logInfoAbout(name, year) {
+//     const age = calculateAge(year)
+
+//     if (age > 0) {
+//     console.log(`He name is ${name} and age of ${age}`)
+//     } else {
+//         console.log('That the future')
+//     }
+// }
+
+// logInfoAbout(`Mike`, `2025`)
+// logInfoAbout(`Mikki`, `1997`)
