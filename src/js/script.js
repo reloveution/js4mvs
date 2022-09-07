@@ -61,23 +61,33 @@ console.clear()
 // const isFullAge = (currentYear - birthYear) >= fullAge // 26 >= 27
 // console.log(isFullAge)
 
-// 6 Условные операторы
-const courseStatus = `pendng` // ready, fail, pending
+// // 6 Условные операторы
+// const courseStatus = `pendng` // ready, fail, pending
 
-if (courseStatus === `ready`) {
-    console.log(`Well done!`)
-} else if (courseStatus === `pending`) {
-    console.log(`Is pending`)
-} else {
-    console.log('Unknown')
+// if (courseStatus === `ready`) {
+//     console.log(`Well done!`)
+// } else if (courseStatus === `pending`) {
+//     console.log(`Is pending`)
+// } else {
+//     console.log('Unknown')
+// }
+
+// const isReady = true
+
+// if (isReady) {
+//     console.log(`Ok`)
+// } else {
+//     console.log(`No`)
+// }
+
+// // Тернарное выражение
+// isReady ? console.log('Ok') : console.log('No')
+
+// 7 Булевая логика
+// 8 Функции
+function calculateAge(year) {
+    return 2020 - year
 }
 
-const isReady = true
-
-if (isReady) {
-    console.log(`Ok`)
-} else {
-    console.log(`No`)
-}
-
-isReady ? console.log('Ok') : console.log('No')
+const myAge = calculateAge(1993)
+console.log(myAge)
