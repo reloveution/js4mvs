@@ -133,4 +133,25 @@ console.clear()
 //     console.log(car)
 // }
 
-// 11 Objects
+// // 11 Objects
+
+// const person = {
+//     firstName: `Mike`,
+//     lastName: `Kolinski`,
+//     year: 1987,
+//     languages: [`Ru`, `En`],
+//     hasWife: false,
+//     greet: function() {
+//         console.log(`greet`)
+//     }
+// }
+
+// console.log(person.firstName)
+// console.log(person[`lastName`])
+// const key = `languages`
+// console.log(person[key])
+// person.hasWife = true
+// console.log(person[`hasWife`])
+// person.isProgrammer = true
+// console.log(person[`isProgrammer`])
+// person.greet()
