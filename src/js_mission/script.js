@@ -1,4 +1,5 @@
 // Основные классы
+console.log(`-------------Step 1-----------`)
 
 class Round {
     constructor(r) {
@@ -50,9 +51,17 @@ class Factory {
     }
 }
 
-// Создаём фабрику и массив с объектами
+// Создаём фабрику, создаем класс для массива
+// и сам массив с объектами
 
 const factory = new Factory();
+
+// class Massive {
+//     findMin {
+//         let x = 0
+
+//     }
+// }
 
 const massive = [
     factory.create( 'ro', 2),
@@ -73,3 +82,33 @@ console.log(`------------------------------`)
 massive.forEach( massive => {
     massive.define()
 })
+
+console.log(`-------------Step 2-----------`)
+
+var indexMin
+var minTemp = massive[0].getArea()
+
+// console.log(minTemp)
+
+for (let i = 0; i < massive.length; i++) {
+    if (massive[i].getArea() < minTemp) {
+        minTemp = massive[i].getArea()
+        indexMin = i
+    }
+}
+console.log('Position element with Min area ' + (indexMin + 1))
+console.log(massive[indexMin])
+console.log(minTemp)
+
+var indexMax
+var maxTemp = 0
+for (let i = 0; i < massive.length; i++) {
+    if (massive[i].getArea() > maxTemp) {
+        maxTemp = massive[i].getArea()
+        indexMax = i
+    }
+}
+
+console.log('Position element with Max area ' + (indexMax + 1))
+console.log(massive[indexMax])
+console.log(maxTemp)
