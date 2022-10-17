@@ -56,14 +56,77 @@ class Factory {
 
 const factory = new Factory();
 
-// class Massive {
-//     findMin {
-//         let x = 0
+// const massive = [
+//     factory.create( 'ro', 2),
+//     factory.create( 'ro', 3),
+//     factory.create( 'ro', 4),
+//     factory.create( 'tr', 2),
+//     factory.create( 'tr', 3),
+//     factory.create( 'tr', 4),
+//     factory.create( 'sq', 2),
+//     factory.create( 'sq', 3),
+//     factory.create( 'sq', 4)
+// ]
 
+// console.log(massive)
+// console.log(`------------------------------`)
+
+
+// massive.forEach( massive => {
+//     massive.define()
+// })
+
+console.log(`-------------Step 2-----------`)
+
+// let indexMin
+// let minTemp = massive[0].getArea()
+
+// // console.log(minTemp)
+
+// for (let i = 0; i < massive.length; i++) {
+//     if (massive[i].getArea() < minTemp) {
+//         minTemp = massive[i].getArea()
+//         indexMin = i
 //     }
 // }
+// console.log('Position element with Min area ' + (indexMin + 1))
+// console.log(massive[indexMin])
+// console.log(minTemp)
 
-const massive = [
+// let indexMax
+// let maxTemp = 0
+// for (let i = 0; i < massive.length; i++) {
+//     if (massive[i].getArea() > maxTemp) {
+//         maxTemp = massive[i].getArea()
+//         indexMax = i
+//     }
+// }
+// console.log('Position element with Max area ' + (indexMax + 1))
+// console.log(massive[indexMax])
+// console.log(maxTemp)
+
+console.log(`-------------Step 2.1----------`)
+
+class Massive {
+    // let indexMax
+    // let maxTemp = 0
+
+    findMin() {
+        let indexMin
+        let minTemp = massive[0].getArea()
+        for (let i = 0; i < obj.length; i++){    
+            if (massive[i].getArea() < minTemp) {
+                minTemp = massive[i].getArea()
+                indexMin = i
+            }
+        }
+        console.log('Position element with Min area ' + (indexMin + 1))
+        console.log(massive[indexMin])
+        console.log(minTemp)
+    }
+}
+
+const massive = new Massive([
     factory.create( 'ro', 2),
     factory.create( 'ro', 3),
     factory.create( 'ro', 4),
@@ -73,42 +136,6 @@ const massive = [
     factory.create( 'sq', 2),
     factory.create( 'sq', 3),
     factory.create( 'sq', 4)
-]
+]);
 
 console.log(massive)
-console.log(`------------------------------`)
-
-
-massive.forEach( massive => {
-    massive.define()
-})
-
-console.log(`-------------Step 2-----------`)
-
-var indexMin
-var minTemp = massive[0].getArea()
-
-// console.log(minTemp)
-
-for (let i = 0; i < massive.length; i++) {
-    if (massive[i].getArea() < minTemp) {
-        minTemp = massive[i].getArea()
-        indexMin = i
-    }
-}
-console.log('Position element with Min area ' + (indexMin + 1))
-console.log(massive[indexMin])
-console.log(minTemp)
-
-var indexMax
-var maxTemp = 0
-for (let i = 0; i < massive.length; i++) {
-    if (massive[i].getArea() > maxTemp) {
-        maxTemp = massive[i].getArea()
-        indexMax = i
-    }
-}
-
-console.log('Position element with Max area ' + (indexMax + 1))
-console.log(massive[indexMax])
-console.log(maxTemp)
