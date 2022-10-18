@@ -161,11 +161,11 @@ class Massive {
 
     sortMax() {
         let t
-        for (let i = 0; i < this.m.length; i++) {
-            if (this.m[i].getArea() < this.m[i+1].getArea()) {
+        for (let i = 1; i < this.m.length; i++) {
+            if (this.m[i-1].getArea() < this.m[i].getArea()) {
                 t = this.m[i]
-                this.m[i] = this.m[i+1]
-                this.m[i+1] = t
+                this.m[i] = this.m[i-1]
+                this.m[i-1] = t
                 i = 0
             }            
         }
