@@ -31,7 +31,7 @@ class Square {
     }
 }
 
-// Фабрика классов
+// Фабрика классов(абстрактная фабрика)
 
 class Factory {
     static list = {
@@ -108,25 +108,48 @@ console.log(`-------------Step 2-----------`)
 console.log(`-------------Step 2.1----------`)
 
 class Massive {
-    // let indexMax
-    // let maxTemp = 0
+
+    constructor(m) {
+        this.m = m;
+    }
 
     findMin() {
         let indexMin
-        let minTemp = massive[0].getArea()
-        for (let i = 0; i < obj.length; i++){    
-            if (massive[i].getArea() < minTemp) {
-                minTemp = massive[i].getArea()
+        let minTemp = this.m[0].getArea()
+        for (let i = 0; i < this.m.length; i++){    
+            if (this.m[i].getArea() < minTemp) {
+                minTemp = this.m[i].getArea()
                 indexMin = i
             }
         }
         console.log('Position element with Min area ' + (indexMin + 1))
-        console.log(massive[indexMin])
-        console.log(minTemp)
+        console.log(this.m[indexMin])
+        console.log('Area is ' + minTemp)
     }
+
+    findMax() {
+        let indexMax
+        let maxTemp = 0
+        for (let i = 0; i < this.m.length; i++) {
+            if (this.m[i].getArea() > maxTemp) {
+                maxTemp = this.m[i].getArea()
+                indexMax = i
+            }
+        }
+        console.log('Position element with Max area ' + (indexMax + 1))
+        console.log(this.m[indexMax])
+        console.log('Area is ' + maxTemp)
+    }
+
+    listing() {
+        for (let i = 0; i < this.m.length; i++){
+            this.m[i].define()
+        }
+    }
+
 }
 
-const massive = new Massive([
+const massive = new Massive ([
     factory.create( 'ro', 2),
     factory.create( 'ro', 3),
     factory.create( 'ro', 4),
@@ -138,4 +161,9 @@ const massive = new Massive([
     factory.create( 'sq', 4)
 ]);
 
-console.log(massive)
+massive.listing()
+console.log('------------------')
+massive.findMin()
+console.log('------------------')
+massive.findMax()
+console.log('------------------')
