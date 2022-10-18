@@ -147,9 +147,33 @@ class Massive {
         }
     }
 
+    sortMin() {
+        let t
+        for (let i = 1; i < this.m.length; i++){
+            if (this.m[i].getArea() < this.m[i-1].getArea()) {
+                t = this.m[i-1]
+                this.m[i-1] = this.m[i]
+                this.m[i] = t
+                i = 0
+            }
+        }
+    }
+
+    sortMax() {
+        let t
+        for (let i = 0; i < this.m.length; i++) {
+            if (this.m[i].getArea() < this.m[i+1].getArea()) {
+                t = this.m[i]
+                this.m[i] = this.m[i+1]
+                this.m[i+1] = t
+                i = 0
+            }            
+        }
+    }
+
 }
 
-const massive = new Massive ([
+let massive = new Massive ([
     factory.create( 'ro', 2),
     factory.create( 'ro', 3),
     factory.create( 'ro', 4),
@@ -166,4 +190,9 @@ console.log('------------------')
 massive.findMin()
 console.log('------------------')
 massive.findMax()
-console.log('------------------')
+console.log('-------sortMin-----------')
+massive.sortMin()
+massive.listing()
+console.log('-------sortMax-----------')
+massive.sortMax()
+massive.listing()
