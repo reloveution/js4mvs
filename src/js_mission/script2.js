@@ -1,5 +1,11 @@
 console.clear()
-const nString = '1234567890123456789012345678901234567890'
+
+let nString = ''
+
+for (let i = 0; i < 20; i++){
+    nString += Math.floor(Math.random() * 10);
+}
+
 console.log(nString)
 
 for (let i = 0; i < nString.length; i++){
