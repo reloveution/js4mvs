@@ -24,34 +24,33 @@ console.clear()
 //     } 
 // }
 
+function makeString(l) {
+    let stroke = ''
+    for (let i = 0; i < l; i++){
+        stroke += Math.floor(Math.random() * 10);
+    }
+    return stroke
+}
+
 
 class Rstring {
     constructor(l) {
-        this.l = l;
-        nString = Rstring.makeString(l)
-    }
-
-    
-
-    makeString(l) {
-        for (let i = 0; i < l; i++){
-            nString += Math.floor(Math.random() * 10);
-        }
+        nString : makeString(l)
     }
 
     match(x) {
-        console.log(nString)
+        console.log(this.nString)
 
-        for (let i = 0; i < nString.length; i++){
-            let n = Number(nString[i])
-            for (let ii = i+1; (n < x) || (ii < nString.length); ii++){
-                n += Number(nString[ii])
+        for (let i = 0; i < this.nString.length; i++){
+            let n = Number(this.nString[i])
+            for (let ii = i+1; (n < x) || (ii < this.nString.length); ii++){
+                n += Number(this.nString[ii])
                 if (n === x) {
                     console.log('----match----')
                     console.log(`Start position is ${i+1}, end position is ${ii+1}`)
                     let iii = 0
                     while (iii <= (ii - i)) {
-                        console.log(nString[i+iii]);
+                        console.log(this.nString[i+iii]);
                         iii++;
                     }
                 }
