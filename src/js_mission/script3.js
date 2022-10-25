@@ -47,23 +47,31 @@ function sortMin2(x) {
 }
 ////////////////////////////////////////////////////////////
 function sortMin3(x) {
+    let t, mn, mx
     let m = 0
     let n = 0
     let min = x[0]
     let max = 0
-    for (let i = 0; i < (x.length - n); i++) {
+    for (let i = 0; i < (x.length / 2); i++, n++) {
         for (let ii = i; ii < (x.length - n); ii++) {
             if (max < x[ii]) {
                 max = x[ii]
+                mx = ii
             }
             if (min > x[ii]) {
                 min = x[ii]
+                mn = ii
             }
         }
-        x[i] = min
-        x[x.length - n] = max
+        t = x[i]
+        x[i] = x[mn]
+        x[mn] = t
+        t = x[x.length - n]
+        x[x.length - n] = x[mx]
+        x[mx] = t
+
         m++
-        n++
+        // n++
     }
     console.log(m)
 }
